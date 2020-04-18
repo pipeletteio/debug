@@ -142,7 +142,7 @@ All methods can be disabled using environment variables.
 Importance order:
 ```
   1. PIPELETTEIO_DEBUG = (true | false)
-  2. (DEBUG | NDEBUG | NODE_DEBUG) = true
+  2. (DEBUG | NDEBUG | NODE_DEBUG) = (true | false)
   3. (CI | CONTINUOUS_INTEGRATION) != undefined
   4. NODE_ENV = (production | test)
 ```
