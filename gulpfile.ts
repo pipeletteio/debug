@@ -4,6 +4,7 @@ const sourcemaps = require('gulp-sourcemaps');
 const shell = require('gulp-shell');
 const replace = require('gulp-replace');
 const ts = require('gulp-typescript');
+const tslint = require('gulp-tslint');
 const typescript = require('typescript');
 const tsConfig = require('./tsconfig.json');
 
@@ -52,6 +53,13 @@ export class Gulpfile {
         .pipe(sourcemaps.write('.', { sourceRoot: '', includeContent: true }))
         .pipe(gulp.dest(packageSourceLocation))
     ];
+  }
+
+  @Task()
+  lint () {
+    return gulp.src(['./src/**/*.ts', './test/**/*.ts'])
+      .pipe(tslint({ configuration: './tslint.json', formatter: 'stylish' }))
+      .pipe(tslint.report({ summarizeFailureOutput: true }));
   }
 
   @SequenceTask()

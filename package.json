@@ -20,7 +20,7 @@
   "scripts": {
     "build": "gulp build",
     "compile": "gulp compile",
-    "lint": "tslint -p ./",
+    "lint": "gulp lint",
     "pretest": "npm run lint",
     "test": "jest --config ./config/jest/jest.config.js",
     "precoverage": "npm run lint",
@@ -52,6 +52,7 @@
     "gulp-replace": "^1.0.0",
     "gulp-shell": "^0.8.0",
     "gulp-sourcemaps": "^2.6.5",
+    "gulp-tslint": "^8.1.4",
     "gulp-typescript": "^5.0.1",
     "gulpclass": "^0.2.0",
     "jest": "^25.3.0",
