@@ -2,7 +2,7 @@
   <p>@pipeletteio/debug</p>
 </h1>
 
-<p align="center"></p>
+<p align="center">A simple debug module</p>
 
 <p align="center">
   <a alt="Build Status" href="https://github.com/pipeletteio/debug/actions?query=workflow">
