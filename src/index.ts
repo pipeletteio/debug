@@ -82,7 +82,7 @@ export class Debug extends Console {
   }
 
   /** Replace methods by nop function. (nop function is a function that do nothing.) */
-  protected _disableLogMethods (): void {
+  protected _disableLogMethods (): Debug {
     const debugDescriptors = Object.entries(Object.getOwnPropertyDescriptors(this));
     return Object.defineProperties(this,
       Object.fromEntries(
