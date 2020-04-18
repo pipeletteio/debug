@@ -98,12 +98,13 @@ export class Debug extends Console {
   /** Get the "MUST DEBUG" state. */
   protected _isDebugNeeded (): boolean {
     const env = process.env;
+    const envDebug = env.DEBUG || env.NDEBUG || env.NODE_DEBUG || undefined;
 
     if (env.PIPELETTEIO_DEBUG)
       return env.PIPELETTEIO_DEBUG === 'true';
 
-    if (env.DEBUG === 'true' || env.NDEBUG === 'true' || env.NODE_DEBUG === 'true')
-      return true;
+    if (envDebug)
+      return envDebug === 'true';
 
     if (env.CI || env.CONTINUOUS_INTEGRATION)
       return false;
