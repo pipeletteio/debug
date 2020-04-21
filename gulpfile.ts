@@ -57,7 +57,8 @@ export class Gulpfile {
 
   @Task()
   lint () {
-    return gulp.src(['./src/**/*.ts', './test/**/*.ts'])
+    const ignoredPaths = ['!node_modules/**', '!coverage/**', '!cache/**', '!build/**'];
+    return gulp.src(['**/*.ts', ...ignoredPaths])
       .pipe(tslint({ configuration: './tslint.json', formatter: 'stylish' }))
       .pipe(tslint.report({ summarizeFailureOutput: true }));
   }

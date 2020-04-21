@@ -38,20 +38,22 @@ const dedicatedDebug = new Debug('myDedicatedDebugName', { useNewMeter: true });
 debug.title('title');
 debug.question('question');
 dedicatedDebug.done('done');
+dedicatedDebug.note('note');
 
 setTimeout(() => {
   debug.valid('valid');
   debug.invalid('invalid');
-  dedicatedDebug.done('fail');
+  dedicatedDebug.fail('fail');
 }, 500);
 
 // -- Outputs:
 // ❱ title +4ms
 // ❓ question +2ms
 // [myDedicatedDebugName] done +2ms
-// ✔ valid +502ms
+// [myDedicatedDebugName] note +1ms
+// ✔ valid +503ms
 // ✗ invalid +1ms
-// [myDedicatedDebugName] fail +503ms
+// [myDedicatedDebugName] fail +504ms
 ```
 
 ## API
@@ -71,6 +73,16 @@ Return `void`.
 #### Debug.prototype.done
 
 Write a formatted message to stdout.
+
+|          argument         |    type    |    details    |
+|---------------------------|------------|---------------|
+| arg                       | `string`   | The message.  |
+
+Return `void`.
+
+#### Debug.prototype.note
+
+Write a formatted message to stdout (done alias).
 
 |          argument         |    type    |    details    |
 |---------------------------|------------|---------------|

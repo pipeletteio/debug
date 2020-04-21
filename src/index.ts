@@ -50,6 +50,7 @@ export class Debug extends Console {
 
     this._registerLogMethod('fail', this.error);
     this._registerLogMethod('done', this.log);
+    this._registerLogMethod('note', this.log);
     this._registerLogMethod('invalid', this.error, '\u001b[31m✗\u001b[0m');
     this._registerLogMethod('valid', this.log, '\u001b[32m✔\u001b[0m');
     this._registerLogMethod('question', this.log, '\u001b[33m❓\u001b[0m');
