@@ -25,6 +25,7 @@
     "test": "jest --config ./config/jest/jest.config.js",
     "precoverage": "npm run lint",
     "coverage": "jest --config ./config/jest/jest.config.js --coverage",
+    "update-changelog": "auto-changelog --template ./config/changelog/changelog-template.hbs --commit-limit false",
     "publishing": "gulp publish"
   },
   "husky": {
@@ -47,6 +48,7 @@
     "@commitlint/cli": "^8.3.5",
     "@types/jest": "^25.2.1",
     "@types/node": "^13.11.1",
+    "auto-changelog": "^2.0.0",
     "del": "^5.1.0",
     "gulp": "^4.0.2",
     "gulp-replace": "^1.0.0",
