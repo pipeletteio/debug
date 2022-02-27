@@ -37,7 +37,6 @@ export class Debug extends Console {
   /**
    * @param name - The debug instance name.
    * @param options - The debug instance options object.
-   * @param options.useNewMeter - Set to true if the debug instance must use an independent time meter.
    */
   constructor (name?: string | null, options: { useNewMeter?: boolean | null } = {}) {
     super({ stderr: process.stderr, stdout: process.stdout });

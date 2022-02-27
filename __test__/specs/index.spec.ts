@@ -1,10 +1,8 @@
 const stripAnsi = require('strip-ansi');
 
-const env = process.env;
-// Set env variables from the global scope before the debug import to load fine the shared debug;
-env.PIPELETTEIO_DEBUG = 'true';
+import { debug, Debug } from '@/src/index';
 
-import { debug, Debug } from '../../../src/index';
+const env = process.env;
 
 let initialStderrWrite: (chunk: Buffer, encoding?: any, next?: (err?: Error) => void) => boolean;
 let initialStdoutWrite: (chunk: Buffer, encoding?: any, next?: (err?: Error) => void) => boolean;
