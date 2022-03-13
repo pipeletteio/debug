@@ -30,7 +30,7 @@ npm install @pipeletteio/debug
 ## Example
 
 ```javascript
-const { debug, Debug } = require('@pipeletteio/debug');
+import { debug, Debug } from '@pipeletteio/debug';
 
 // Create a dedicated debugger.
 const dedicatedDebug = new Debug('myDedicatedDebugName', { useNewMeter: true });
@@ -55,6 +55,9 @@ setTimeout(() => {
 // ✗ invalid +1ms
 // [myDedicatedDebugName] fail +504ms
 ```
+
+## Docs:
+Read documentation [here](https://pipeletteio.github.io/debug).
 
 ## API
 

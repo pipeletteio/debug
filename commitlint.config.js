@@ -12,6 +12,7 @@ module.exports = {
       'feat',
       'fix',
       'perf',
+      'release',
       'refactor',
       'revert',
       'src',
@@ -19,7 +20,6 @@ module.exports = {
       'test'
     ]],
     'scope-case': [2, 'always', 'lower-case'],
-    'scope-empty': [0, 'never'],
     'subject-empty': [2, 'never'],
     'subject-full-stop': [2, 'never', '.'],
     'body-leading-blank': [0, 'always'],
