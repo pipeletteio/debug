@@ -1,5 +1,13 @@
 ## Changelog
 
+## [1.0.0](https://github.com/pipeletteio/debug/compare/0.2.1...1.0.0)
+
+> 13 March 2022
+
+#### Commits
+- [[`150d52d`]](https://github.com/pipeletteio/debug/commit/150d52d719c5167c99adbcae56b92bc914156b62) - build: rework configuration
+- [[`16fa99f`]](https://github.com/pipeletteio/debug/commit/16fa99fc66914fcbe3f71cb3ac3a349a5bdf3f62) - build: rework package and tests
+- [[`2891228`]](https://github.com/pipeletteio/debug/commit/2891228f58be2e866c6c6cd05d0731e2a416ca18) - chore: bump version to 1.0.0
 ## [0.2.1](https://github.com/pipeletteio/debug/compare/0.2.0...0.2.1)
 
 > 21 April 2020
