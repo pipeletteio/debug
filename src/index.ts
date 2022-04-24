@@ -1,7 +1,7 @@
-export * from './types';
+export { DebugInterface, DebugOptions } from './types';
 
 import { Debug } from './debug';
-export * from './debug';
+export { debug, Debug } from './debug';
 
 const store = {
   map: new Map<string, Debug>()
